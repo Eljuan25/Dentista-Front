@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
 
 :root {
   --background: #ffffff;
@@ -14,8 +15,14 @@
   }
 }
 
+/* Asegúrate de que Playwrite IN se aplica a todo el documento o a los elementos necesarios */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Playwrite IN", serif;  /* Actualizado para usar la fuente personalizada */
+}
+
+/* Si necesitas usar la fuente en elementos específicos, puedes aplicar una clase en su lugar */
+h1 {
+  font-family: "Playwrite IN", serif;  /* Aplícalo en los elementos que quieras */
 }
