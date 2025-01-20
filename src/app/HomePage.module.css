@@ -1,0 +1,72 @@
+/* HomePage.module.css */
+.mainContainer {
+  font-family: "Playwrite IN", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Permite que crezca más allá del viewport */
+  background-color: #f4f4f9;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+/* Estilo para el título con la fuente Playwrite IN */
+.playwriteIn {
+  font-family: "Playwrite IN", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Estilo para el título principal */
+.heading {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el párrafo de la bienvenida */
+.paragraph {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Estilos para la sección de descripción */
+.descriptionSection {
+  display: flex;
+  flex-direction: row; /* Imagen y texto en fila */
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  text-align: left;
+  max-width: 1200px; /* Limitar el tamaño de la sección */
+}
+
+.descriptionSection img {
+  width: 300px; /* Tamaño de la imagen */
+  height: 300px;
+  margin-right: 20px;
+  border-radius: 10px;
+  object-fit: cover; /* Separación entre la imagen y el texto */
+}
+
+.textContent {
+  max-width: 600px; /* Limitar el ancho del texto */
+}
+
+.textContent h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.textContent p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}

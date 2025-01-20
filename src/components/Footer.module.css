@@ -1,0 +1,27 @@
+.footer {
+    background-color: #f8f4f4;
+    color: #131111;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 120%;
+  }
+  
+  .footerContent {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .location, .phone {
+    margin: 5px 0;
+    line-height: 1.5;
+  }
+  
+  .map {
+    margin-top: 10px;
+    border-radius: 20px; /* Bordes redondeados del mapa */
+    overflow: hidden;
+  }
+  

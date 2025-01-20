@@ -1,4 +1,6 @@
 
+
+
 export const metadata = {
   title: "Consultorió XYC",
   description: "Agenda tu cita fácilmente",

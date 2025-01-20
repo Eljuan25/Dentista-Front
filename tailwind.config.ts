@@ -16,3 +16,16 @@ export default {
   },
   plugins: [],
 } satisfies Config;
+
+
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        playwrite: ['"Playwrite IN"', 'serif'],
+      },
+    },
+  },
+  plugins: [],
+}
