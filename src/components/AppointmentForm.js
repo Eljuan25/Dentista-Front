@@ -29,6 +29,7 @@ export default function AppointmentForm() {
                 type="text"
                 name="name"
                 value={formData.name}
+                onChange={handleInpuntChange}
                 required
                  />
             </label>
