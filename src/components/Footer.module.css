@@ -1,27 +1,108 @@
 .footer {
-    background-color: #f8f4f4;
-    color: #131111;
-    padding: 20px;
-    text-align: center;
-    font-size: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 120%;
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  color: white;
+  padding: 20px;
+  border-top-left-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Asegura que los elementos no se desborden en pantallas más pequeñas */
+}
+
+.footerContent,
+.newsletter,
+.socialIcons,
+.mapContainer {
+  flex: 1;
+  margin: 10px;
+}
+
+.location, .phone {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.newsletter {
+  margin-top: 20px;
+}
+
+.newsletter h3 {
+  text-transform: uppercase;
+  font-size: 1.7em;
+  margin-bottom: 20px;
+}
+
+.underline {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.underline span {
+  width: 7px;
+  height: 100%;
+  position: absolute;
+  left: 10px;
+  background-color: rgb(63, 63, 63);
+  border-radius: 3px;
+  animation: moving 1.5s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px;
   }
-  
-  .footerContent {
-    max-width: 800px;
-    margin: 0 auto;
+  100% {
+    left: 100%;
   }
-  
-  .location, .phone {
-    margin: 5px 0;
-    line-height: 1.5;
-  }
-  
-  .map {
-    margin-top: 10px;
-    border-radius: 20px; /* Bordes redondeados del mapa */
-    overflow: hidden;
-  }
-  
+}
+
+.form {
+  display: flex;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+
+.form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  padding-left: 10px;
+}
+
+.form button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
+.socialIcons {
+  margin-top: 20px;
+}
+
+.socialIcons i {
+  padding: 10px;
+  background-color: white;
+  color: #000000;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.mapContainer {
+  text-align: center;
+}
+
+.map iframe {
+  border: none;
+  width: 120%;
+  height: 100px; /* Puedes ajustar la altura según lo que necesites */
+}

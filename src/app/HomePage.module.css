@@ -1,27 +1,20 @@
 /* HomePage.module.css */
 .mainContainer {
-  font-family: "Playwrite IN", serif;
+  font-family: "Arial", sans-serif;  /* Fuente predeterminada para el cuerpo */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Permite que crezca más allá del viewport */
+  min-height: 100vh;
   background-color: #f4f4f9;
   text-align: center;
   padding: 10px;
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+  box-sizing: border-box;
 }
 
-/* Estilo para el título con la fuente Playwrite IN */
+/* Estilo para el título principal h1 */
 .playwriteIn {
-  font-family: "Playwrite IN", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Estilo para el título principal */
-.heading {
+  font-family: "Playwrite IN", serif;  /* Fuente personalizada Playwrite IN para títulos */
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 20px;
@@ -39,27 +32,28 @@
 /* Estilos para la sección de descripción */
 .descriptionSection {
   display: flex;
-  flex-direction: row; /* Imagen y texto en fila */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
   text-align: left;
-  max-width: 1200px; /* Limitar el tamaño de la sección */
+  max-width: 1200px;
 }
 
 .descriptionSection img {
-  width: 300px; /* Tamaño de la imagen */
+  width: 300px;
   height: 300px;
   margin-right: 20px;
   border-radius: 10px;
-  object-fit: cover; /* Separación entre la imagen y el texto */
+  object-fit: cover;
 }
 
 .textContent {
-  max-width: 600px; /* Limitar el ancho del texto */
+  max-width: 600px;
 }
 
 .textContent h2 {
+  font-family: "Playwrite IN", serif; /* Aplicamos la fuente aquí también para h2 */
   font-size: 1.8rem;
   color: #333;
   margin-bottom: 10px;
