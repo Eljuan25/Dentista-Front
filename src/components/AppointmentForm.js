@@ -72,7 +72,7 @@ export default function AppointmentForm() {
                             required
                         />
                         <label htmlFor="date" className={formData.date || document.getElementById("date")?.focused ? styles.floated : ""}>
-                            Fecha
+                            
                         </label>
                     </div>
 
@@ -86,7 +86,7 @@ export default function AppointmentForm() {
                             required
                         />
                         <label htmlFor="time" className={formData.time || document.getElementById("time")?.focused ? styles.floated : ""}>
-                            Hora
+                          
                         </label>
                     </div>
 

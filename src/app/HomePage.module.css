@@ -9,15 +9,14 @@
   background-color: #f4f4f9;
   text-align: center;
   padding: 10px;
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+  box-sizing: border-box; 
 }
 
-/* Estilo para el título principal h1 */
-.playwriteIn {
-  font-family: "Playwrite IN", serif; /* Fuente personalizada Playwrite IN para títulos */
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+.h1Ti{
+  font-family: "Playwrite IN", serif; 
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 /* Estilo para el título principal */
@@ -29,7 +28,7 @@
 
 /* Estilo para el párrafo de la bienvenida */
 .paragraph {
-  font-size: 1.25rem;
+  font-size: 1.80rem;
   color: #666;
   margin-bottom: 40px;
   max-width: 600px;
@@ -48,23 +47,26 @@
 }
 
 .descriptionSection img {
-  width: 300px; /* Tamaño de la imagen */
-  height: 300px;
+  width: 400px; /* Tamaño de la imagen */
+  height: 400px;
   margin-right: 20px;
   border-radius: 10px;
-  object-fit: cover; /* Separación entre la imagen y el texto */
+  object-fit: cover; 
 }
 
 .textContent {
-  max-width: 600px; /* Limitar el ancho del texto */
+  max-width: 600px; 
 }
 
 .textContent h2 {
-  font-family: "Playwrite IN", serif; /* Aplicamos la fuente aquí también para h2 */
+  font-family: "Playwrite IN", serif; 
   font-size: 1.8rem;
   color: #333;
   margin-bottom: 10px;
 }
+
+
+
 
 .textContent p {
   font-size: 1.1rem;

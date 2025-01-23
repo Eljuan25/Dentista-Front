@@ -24,7 +24,7 @@
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 3px solid #000000;
+    border: 3px solid #fbf9f9;
     border-radius: 5px;
     outline: none;
     transition: border-color 0.3s ease;
@@ -46,14 +46,14 @@
 
 .formGroup .floated {
     top: 10px;
-    font-size: 12px;
-    color: #5d5dff;
+    font-size:2px;
+    color: #d1d1ff;
 }
 
 .formContainer button {
     width: 100%;
     padding: 12px;
-    background-color: #5d5dff;
+    background-color: #9999f7;
     border: none;
     border-radius: 5px;
     color: white;
@@ -62,7 +62,7 @@
 }
 
 .formContainer button:hover {
-    background-color: #4c4cd0;
+    background-color: #c1c1f0;
 }
 
 /* Calendario */
@@ -74,14 +74,14 @@
 .react-calendar {
     border: none;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(159, 159, 159, 0.1);
 }
 
 
 .playwriteIn {
     font-size: 24px;
     font-weight: bold;
-    color: #333333; /* Color negro suave */
+    color: #040404; 
     margin-bottom: 20px;
 }
 
