@@ -1,0 +1,21 @@
+.calendar-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.meses {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.meses > * {
+    font-size: 1.5rem;
+}
+
+.days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}

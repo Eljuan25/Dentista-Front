@@ -4,6 +4,7 @@ import { useState } from "react";
 import Calendar from "react-calendar";  // Importamos el calendario
 import styles from './AppointmentForm.module.css'; 
 
+
 export default function AppointmentForm() {
     const [formData, setFormData] = useState({
         name: "",
@@ -52,6 +53,7 @@ export default function AppointmentForm() {
 
     return (
         <div className={styles.formContainer}>
+            
             {/* Formulario */}
             <div className={styles.formGroupContainer}>
                 <h1 className={styles.playwriteIn}>Agenda Con Nosotros</h1>

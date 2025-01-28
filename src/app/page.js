@@ -3,16 +3,20 @@
 import AppointmentForm from "@/components/AppointmentForm";
 import Footer from "@/components/Footer.js";
 import styles from './HomePage.module.css';
+import Calendar from '../components/calendar'
 
 export default function HomePage() {
   return (
     <main className={styles.mainContainer}>
       
+      <div style={{width: 500 + 'px', height: 500 + 'px'}}>
+        <Calendar />
+      </div>
+      
       <h1 className={styles.h1Ti}>Bienvenido a Clínica Dentista</h1> 
       
       {/* Nueva sección */}
       <section className={styles.descriptionSection}>
-
         
         <img 
           src="https://odontologia.iztacala.unam.mx/wp-content/uploads/2022/09/img_webSS01.jpg"
