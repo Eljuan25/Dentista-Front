@@ -21,12 +21,34 @@ export default function AppointmentForm() {
         setSelectedDate(date);  // Actualiza la fecha seleccionada
         setFormData({ ...formData, date: date.toISOString().split("T")[0] }); // Formatea la fecha para el formulario
     };
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("Enviando cita:", formData);
-        // Aquí se conecta la Api
+    
+        // Hacer la solicitud POST a la API
+        try {
+            const response = await fetch("http://localhost:5000/api/appointments", {
+                method: "POST",  
+                headers: {
+                    "Content-Type": "application/json",  
+                },
+                body: JSON.stringify(formData),  
+            });
+    
+            
+            if (response.ok) {
+                const data = await response.json();
+                console.log("Cita creada:", data);
+                
+            } else {
+                console.error("Error al crear la cita:", response.statusText);
+            }
+        } catch (error) {
+            console.error("Error de red:", error);
+        }
     };
+    
 
     return (
         <div className={styles.formContainer}>
