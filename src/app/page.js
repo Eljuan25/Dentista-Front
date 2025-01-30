@@ -4,11 +4,11 @@ import AppointmentForm from "@/components/AppointmentForm";
 import Footer from "@/components/Footer.js";
 import styles from './HomePage.module.css';
 
-
 export default function HomePage() {
   return (
     <main className={styles.mainContainer}>
-      
+
+
       <h1 className={styles.h1Ti}>Bienvenido a Clínica Dentista</h1> 
       
       {/* Nueva sección */}
