@@ -15,7 +15,7 @@
     "@mui/material": "^6.4.1",
     "@mui/x-date-pickers": "^7.24.0",
     "dayjs": "^1.11.13",
-    "next": "15.1.5",
+    "next": "^15.2.0-canary.33",
     "react": "^19.0.0",
     "react-calendar": "^5.1.0",
     "react-dom": "^19.0.0"
