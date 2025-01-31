@@ -7,12 +7,12 @@ import styles from './HomePage.module.css';
 export default function HomePage() {
   return (
     <main className={styles.mainContainer}>
-      
+
+
       <h1 className={styles.h1Ti}>Bienvenido a Clínica Dentista</h1> 
       
       {/* Nueva sección */}
       <section className={styles.descriptionSection}>
-
         
         <img 
           src="https://odontologia.iztacala.unam.mx/wp-content/uploads/2022/09/img_webSS01.jpg"

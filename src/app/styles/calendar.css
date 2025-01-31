@@ -1,0 +1,38 @@
+.calendar-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.controls-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.controls-section > * {
+    font-size: 1.5rem;
+}
+
+.days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.button-day {
+    border-radius: 10px;
+    margin: 2px;
+    transition: .5s;
+
+    &:hover {
+        background: #9797972e;
+    }
+}
+
+.disabled-day {
+    color: white;
+    background: #979797;
+    border-radius: 10px;
+    margin: 2px;
+}
