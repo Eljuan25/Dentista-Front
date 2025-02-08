@@ -3,6 +3,7 @@
 import AppointmentForm from "@/components/AppointmentForm";
 import Footer from "@/components/Footer.js";
 import styles from './HomePage.module.css';
+import Calendar from "../components/calendar";
 
 export default function HomePage() {
   return (
@@ -31,6 +32,10 @@ export default function HomePage() {
       {/* Formulario de citas */}
       <AppointmentForm />
 
+
+
+      {/*  Calander  */}
+    
       {/* Footer */}
       <Footer />
 
