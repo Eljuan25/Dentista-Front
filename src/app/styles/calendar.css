@@ -13,6 +13,9 @@
 
 .controls-section > * {
     font-size: 1.5rem;
+    width: auto !important;
+    padding: 0px !important;
+    background: none !important;
 }
 
 .days-container {
@@ -21,18 +24,22 @@
 }
 
 .button-day {
-    border-radius: 10px;
-    margin: 2px;
+    background: none !important;
+    color: black !important;
+    border-radius: 10px !important;
+    margin: 2px !important;
     transition: .5s;
+    padding: 0 !important;
 
     &:hover {
-        background: #9797972e;
+        background: #9797972e !important;
     }
 }
 
 .disabled-day {
-    color: white;
-    background: #979797;
-    border-radius: 10px;
-    margin: 2px;
+    color: white !important;
+    background: #979797 !important;
+    border-radius: 10px !important;
+    margin: 2px !important;
+    padding: 0 !important;
 }
