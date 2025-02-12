@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from './AppointmentForm.module.css';
 import Calendar from "../components/calendar";
 
+
 export default function AppointmentForm() {
     const [formData, setFormData] = useState({
         name: "",
@@ -75,6 +76,7 @@ export default function AppointmentForm() {
 
     return (
         <div className={styles.formContainer}>
+
             <div className={styles.formGroupContainer}>
                 <h1 className={styles.playwriteIn}>Agenda Con Nosotros</h1>
                 <form onSubmit={handleSubmit}>
