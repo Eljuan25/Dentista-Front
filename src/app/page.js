@@ -36,7 +36,7 @@ export default function HomePage() {
 
       {/*  Calander  */}
     
-      {/* Footer */}
+      {/* Footer ... */}
       <Footer />
 
     </main>

@@ -4,7 +4,7 @@
     flex-direction: row; 
     justify-content: space-between; 
     align-items: flex-start; 
-    max-width: 1000px; 
+    max-width: 1300px; 
     margin: 2 auto; 
     padding: 100px;
     background-color: #ffffff;
@@ -17,7 +17,7 @@
 .formGroup {
     position: relative;
     margin-bottom: 40px;
-    width: 150%; /* Ocupa todo el ancho disponible dentro de su contenedor */
+    width: 100%; 
 }
 
 .formGroup input {
