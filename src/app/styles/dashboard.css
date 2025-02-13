@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
   }
   
   .dashboard-container {
@@ -43,7 +43,7 @@
   }
   
   .sidebar ul li a:hover {
-    background: #3a3a5d;
+    background: #000000;
   }
   
   /* Contenido Principal */
@@ -58,7 +58,7 @@
   }
   
   .main-content p {
-    color: #666;
+    color: #000;
     margin: 10px 0;
   }
   
@@ -87,15 +87,15 @@
   
   /* Colores para las tarjetas */
   .blue {
-    background: #3498db;
+    background: #004cb5;
   }
   
   .green {
-    background: #2ecc71;
+    background: #009416;
   }
   
   .red {
-    background: #e74c3c;
+    background: #ba1010;
   }
   
   /* Responsive */
