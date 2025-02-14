@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import Calendar from "react-calendar";
 import styles from './AppointmentForm.module.css';
+import Calendar from "../components/calendar";
+
 
 export default function AppointmentForm() {
     const [formData, setFormData] = useState({
@@ -75,6 +76,7 @@ export default function AppointmentForm() {
 
     return (
         <div className={styles.formContainer}>
+
             <div className={styles.formGroupContainer}>
                 <h1 className={styles.playwriteIn}>Agenda Con Nosotros</h1>
                 <form onSubmit={handleSubmit}>
@@ -160,6 +162,7 @@ export default function AppointmentForm() {
             </div>
 
             {/* Calendario */}
+           {/* 
             <div className={styles.calendarContainer}>
                 <Calendar
                     onChange={handleDateChange}
@@ -167,6 +170,14 @@ export default function AppointmentForm() {
                     minDate={minDate} // Aquí usamos minDate también
                 />
             </div>
+            */}
+
+               <div style={{width: 400 + 'px', height: 400 + 'px'}}>
+                     <Calendar diasInahabiles={["SAB", "MIE"]} diaClikeado={(day) => console.log(day)} diasSabaticos={{"mes": "ENERO", "dias": [31,13]}}/>
+                </div>
+            
+
+
         </div>
     );
 }
