@@ -1,18 +1,19 @@
+'use client'
 
+import { usePathname } from 'next/navigation';
 import '../styles/dashboard.css';
 
 export default function Layout({ children }) {
+    const pathname = usePathname();
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
       <aside className="w-64 bg-gray-800 text-white p-5">
         <h2 className="text-xl font-bold">Menu</h2>
         <ul className="mt-4 space-y-2">
-          <li><a href="/dashboard" className="block p-2 hover:bg-gray-700">Inicio</a></li>
-          <li><a href="/dashboard/citas" className="block p-2 hover:bg-gray-700">Mis Citas</a></li>
-          <li><a href="/dashboard/perfil" className="block p-2 hover:bg-gray-700">Perfil</a></li>
-          <li><a href="/dashboard/mensajes" className="block p-2 hover:bg-gray-700">Mensajes</a></li>
-          <li><a href="/dashboard/configuracion" className="block p-2 hover:bg-gray-700">Configuración</a></li>
+          <li><a href="/dashboard/Calendario" className="block p-2 hover:bg-gray-700">Calendario</a></li>
+          <li><a href="/dashboard/Empleados" className="block p-2 hover:bg-gray-700">Empleados</a></li>
+          <li><a href="/dashboard/Reportes" className="block p-2 hover:bg-gray-700">Reportes</a></li>
         </ul>
       </aside>
 
