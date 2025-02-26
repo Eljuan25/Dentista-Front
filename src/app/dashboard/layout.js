@@ -1,12 +1,15 @@
 'use client'
 
-import { usePathname } from 'next/navigation';
+import Header from '@/components/Header';
 import '../styles/dashboard.css';
 
 export default function Layout({ children }) {
-    const pathname = usePathname();
   return (
+
+
     <div className="flex h-screen">
+
+      <Header></Header>
       {/* Sidebar */}
       <aside className="w-64 bg-gray-800 text-white p-5">
         <h2 className="text-xl font-bold">Menu</h2>
