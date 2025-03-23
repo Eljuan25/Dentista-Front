@@ -24,6 +24,7 @@
 }
 
 .button-day {
+    position: relative;
     background: none !important;
     color: black !important;
     border-radius: 10px !important;
@@ -37,9 +38,20 @@
 }
 
 .disabled-day {
+    position: relative;
     color: white !important;
     background: #979797 !important;
     border-radius: 10px !important;
     margin: 2px !important;
     padding: 0 !important;
+}
+
+.indicador-cita {
+    width: 7px;
+    height: 7px;
+    background: aqua;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    box-shadow: 0px 0px 8px 3px #009393;
 }
