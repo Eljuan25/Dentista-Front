@@ -15,6 +15,8 @@ export default function Modal({open, setOpen, children, acceptButton, textAccept
     <Fragment>
       <Dialog
         open={open}
+        fullWidth={true}
+        maxWidth='sm'
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"

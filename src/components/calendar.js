@@ -1,7 +1,11 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Fragment } from 'react'
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
 import '../app/styles/calendar.css'
 import Modal from './modal'
+import dayjs from 'dayjs'
 
     // EJEMPLO DE COMO UTILIZARLO
     //   {/* Ancho y Alto minimo 300px */}
@@ -9,13 +13,13 @@ import Modal from './modal'
     //     <Calendar diasInahabiles={["SAB", "MIE"]} diaClikeado={(day) => console.log(day)} diasSabaticos={{"mes": "ENERO", "dias": [31,13]} modal={true} calendarFree={false} }/>
     //   </div>
 
-export default function Calendar({diasInahabiles, diaClikeado, diasSabaticos, modal = false, calendarFree=false}) {
+const meses = ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
+const diasSemana = ['LUN', 'MAR', 'MIE', 'JUE', 'VIE', 'SAB', 'DOM']
 
-    const meses = ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
-    const diasSemana = ['LUN', 'MAR', 'MIE', 'JUE', 'VIE', 'SAB', 'DOM']
+const currentMount = new Date().getMonth()
+const currentYear = new Date().getFullYear()
 
-    const currentMount = new Date().getMonth()
-    const currentYear = new Date().getFullYear()
+export default function Calendar({diasInahabiles, diaClikeado, diasSabaticos, citas, monthChange, modal = false, calendarFree=false}) {
 
     const [openDialog, setOpenDialog] = useState(false)
     const [mount, setMount] = useState(currentMount)
@@ -23,12 +27,36 @@ export default function Calendar({diasInahabiles, diaClikeado, diasSabaticos, mo
 
     let daysMount = new Date(year, mount + 1, 0).getDate()
     let startMount = new Date(year, mount, 1).getDay() - 1
+    const [mapCitas, setMapCitas] = useState(new Map())
+    const [currentLookCitas, setCurrentLookCitas] = useState([])
 
     useEffect(() => {
-        console.log(year, mount)
         daysMount = new Date(year, mount + 1, 0).getDate()
         startMount = new Date(year, mount, 1).getDay() - 1
     }, [mount, year])
+
+    useEffect(() => {
+
+        if (!citas) return
+
+        const newMap = new Map()
+    
+        citas.forEach(cita => {
+            const fecha = dayjs(cita.Dia).format("YYYY-MM-DD")
+            
+            if (!newMap.has(fecha)) {
+                newMap.set(fecha, [])
+            }
+    
+            newMap.get(fecha).push(cita)
+        });
+    
+        setMapCitas(newMap)
+    }, [citas])
+
+    useEffect(() => {
+        renderDays()
+    }, [mapCitas])
 
     const handleChangeVisualMount = (navigation) => {
 
@@ -40,17 +68,13 @@ export default function Calendar({diasInahabiles, diaClikeado, diasSabaticos, mo
             navigation = 0
             setYear(year => year + 1)
         }
+
         setMount(navigation)
+        monthChange(navigation + 1)
     }
 
     const handleChangeVisualYear = (navigation) => {
         setYear(navigation)
-    }
-
-    const selectDay = (day) => {
-        const daySelected = new Date(year, mount, day)
-        if (modal) setOpenDialog(true)
-        diaClikeado(daySelected)
     }
 
     const renderNameDays = () => {
@@ -78,6 +102,21 @@ export default function Calendar({diasInahabiles, diaClikeado, diasSabaticos, mo
             return resInhabiles || resDiasSabaticos
         }
 
+        const selectDay = (day) => {
+            const daySelected = new Date(year, mount, day)
+            const date = dayjs(`${year}-${mount + 1}-${day}`).format("YYYY-MM-DD")
+            let res = mapCitas.get(date)
+            setCurrentLookCitas(res)
+            if (modal && res !== undefined ) setOpenDialog(true)
+            diaClikeado(daySelected)
+        }
+
+        const haveCitas = (day) => {
+            const date = dayjs(`${year}-${mount + 1}-${day}`).format("YYYY-MM-DD")
+            let res = mapCitas.get(date)
+            return res !== undefined
+        }
+
         return (
             <>
                 {startMount >= 0 ? 
@@ -96,6 +135,9 @@ export default function Calendar({diasInahabiles, diaClikeado, diasSabaticos, mo
                         onClick={() => selectDay(index + 1)}
                         disabled={isInHabilDay(index + 1)}
                     >
+                        {haveCitas(index + 1) ?
+                            <div className='indicador-cita'></div>
+                        : <></> }
                         {index + 1}
                     </button>
                 ))}
@@ -146,7 +188,15 @@ export default function Calendar({diasInahabiles, diaClikeado, diasSabaticos, mo
 
             <Modal open={openDialog} setOpen={setOpenDialog} textAcceptButton="Aceptar" titulo="Agenda" acceptButton={() => console.log("algo")}>
 
-                <p>Texto de prueba</p>
+                {currentLookCitas.map(el => (
+                    <Fragment key={el.id}>
+                        <ListItem component="div" disablePadding>
+                            <ListItemButton>
+                                <ListItemText primary={`${el.nombre} : ${el.telefono} : Hora de la cita: ${dayjs(el.Dia).format("hh:mm:ss")}`} />
+                            </ListItemButton>
+                        </ListItem>
+                    </Fragment>
+                ))}
 
             </Modal>
         </>
